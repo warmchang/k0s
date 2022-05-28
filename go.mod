@@ -18,7 +18,7 @@ require (
 	github.com/evanphx/json-patch v4.12.0+incompatible
 	github.com/go-openapi/jsonpointer v0.19.5
 	github.com/gorilla/mux v1.8.0
-	github.com/imdario/mergo v0.3.12
+	github.com/imdario/mergo v0.3.13
 	github.com/k0sproject/dig v0.2.0
 	github.com/k0sproject/k0sctl v0.12.6
 	github.com/kardianos/service v1.2.1-0.20210728001519-a323c3813bc7
@@ -55,15 +55,15 @@ require (
 
 // Kubernetes
 require (
-	k8s.io/api v0.24.0
-	k8s.io/apimachinery v0.24.0
-	k8s.io/cli-runtime v0.24.0
-	k8s.io/client-go v0.24.0
+	k8s.io/api v0.24.1
+	k8s.io/apimachinery v0.24.1
+	k8s.io/cli-runtime v0.24.1
+	k8s.io/client-go v0.24.1
 	k8s.io/cloud-provider v0.24.0
-	k8s.io/component-base v0.24.0
+	k8s.io/component-base v0.24.1
 	k8s.io/cri-api v0.24.0
 	k8s.io/kube-aggregator v0.24.0
-	k8s.io/kubectl v0.24.0
+	k8s.io/kubectl v0.24.1
 	k8s.io/kubelet v0.24.0
 	k8s.io/mount-utils v0.24.0
 	k8s.io/utils v0.0.0-20220210201930-3a6ce19ff2f9
@@ -274,14 +274,14 @@ require (
 	gopkg.in/ini.v1 v1.66.2 // indirect
 	gopkg.in/natefinch/lumberjack.v2 v2.0.0 // indirect
 	gopkg.in/yaml.v2 v2.4.0 // indirect
-	gopkg.in/yaml.v3 v3.0.0-20210107192922-496545a6307b // indirect
+	gopkg.in/yaml.v3 v3.0.0 // indirect
 	k8s.io/apiextensions-apiserver v0.24.0 // indirect
 	k8s.io/apiserver v0.24.0 // indirect
-	k8s.io/component-helpers v0.24.0 // indirect
+	k8s.io/component-helpers v0.24.1 // indirect
 	k8s.io/controller-manager v0.24.0 // indirect
 	k8s.io/klog/v2 v2.60.1 // indirect
 	k8s.io/kube-openapi v0.0.0-20220328201542-3ee0da9b0b42 // indirect
-	k8s.io/metrics v0.24.0 // indirect
+	k8s.io/metrics v0.24.1 // indirect
 	oras.land/oras-go v1.1.1 // indirect
 	sigs.k8s.io/apiserver-network-proxy/konnectivity-client v0.0.30 // indirect
 	sigs.k8s.io/json v0.0.0-20211208200746-9f7c6b3444d2 // indirect
