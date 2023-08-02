@@ -21,7 +21,7 @@
         <link rel="next" href="../manifests/">
       
       <link rel="icon" href="../img/k0s_social.png">
-      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.18">
+      <meta name="generator" content="mkdocs-1.5.1, mkdocs-material-9.1.21">
     
     
       
@@ -29,7 +29,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.26e3688c.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.eebd395e.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.ecc896b0.min.css">
@@ -1472,19 +1472,19 @@
 
 
 <h1 id="system-components-monitoring">System components monitoring<a class="headerlink" href="#system-components-monitoring" title="Permanent link">#</a></h1>
-<p>Controller nodes <a href="architecture.md/#control-plane">are isolated</a> by default, which thus means that a cluster user cannot schedule workloads onto controller nodes.</p>
+<p>Controller nodes <a href="../architecture/#control-plane">are isolated</a> by default, which thus means that a cluster user cannot schedule workloads onto controller nodes.</p>
 <p>k0s provides a mechanism to expose system components for monitoring. System component metrics can give a better look into what is happening inside them. Metrics are particularly useful for building dashboards and alerts.
 You can read more about metrics for Kubernetes system components <a href="https://kubernetes.io/docs/concepts/cluster-administration/system-metrics/">here</a>.</p>
 <p><strong>Note:</strong> the mechanism is an opt-in feature, you can enable it on installation:</p>
-<div class="highlight"><pre><span></span><code>```shell
-sudo k0s install controller --enable-metrics-scraper
-```
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>k0s<span class="w"> </span>install<span class="w"> </span>controller<span class="w"> </span>--enable-metrics-scraper
 </code></pre></div>
 <h2 id="jobs">Jobs<a class="headerlink" href="#jobs" title="Permanent link">#</a></h2>
 <p>The list of components which is scrapped by k0s:</p>
 <ul>
 <li>kube-scheduler</li>
 <li>kube-controller-manager</li>
+<li>etcd</li>
+<li>kine</li>
 </ul>
 <p><strong>Note:</strong> kube-apiserver metrics are not scrapped since they are accessible via <code>kubernetes</code> endpoint within the cluster.</p>
 <h2 id="architecture">Architecture<a class="headerlink" href="#architecture" title="Permanent link">#</a></h2>
