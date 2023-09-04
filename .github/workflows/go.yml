@@ -39,7 +39,7 @@ jobs:
 
     steps:
       - name: "Workflow run :: Checkout"
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           persist-credentials: false
 
@@ -91,7 +91,7 @@ jobs:
 
     steps:
       - name: Check out code into the Go module directory
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           persist-credentials: false
 
@@ -135,7 +135,7 @@ jobs:
 
     steps:
       - name: Check out
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           persist-credentials: false
 
@@ -189,7 +189,7 @@ jobs:
 
     steps:
       - name: Check out code into the Go module directory
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Prepare build environment
         run: .github/workflows/prepare-build-env.sh
@@ -262,7 +262,7 @@ jobs:
 
     steps:
       - name: Check out code into the Go module directory
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Prepare build environment
         run: .github/workflows/prepare-build-env.sh
@@ -320,7 +320,7 @@ jobs:
         run: find . -type d -not -perm /u+w -exec chmod u+w '{}' \;
 
       - name: Check out code into the Go module directory
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           fetch-depth: 0 # for `git describe`
           persist-credentials: false
