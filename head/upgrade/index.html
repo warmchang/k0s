@@ -22,7 +22,7 @@
       
       
       <link rel="icon" href="../img/k0s_social.png">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.8">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.9">
     
     
       
@@ -30,7 +30,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.4b4a2bd9.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.78cf6014.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.356b1318.min.css">
@@ -712,14 +712,18 @@
       
         <li class="md-nav__item">
   <a href="#upgrade-a-k0s-node-locally" class="md-nav__link">
-    Upgrade a k0s node locally
+    <span class="md-ellipsis">
+      Upgrade a k0s node locally
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#upgrade-a-k0s-cluster-using-k0sctl" class="md-nav__link">
-    Upgrade a k0s cluster using k0sctl
+    <span class="md-ellipsis">
+      Upgrade a k0s cluster using k0sctl
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="Upgrade a k0s cluster using k0sctl">
@@ -727,7 +731,9 @@
         
           <li class="md-nav__item">
   <a href="#k0sctl-cluster-upgrade-process" class="md-nav__link">
-    k0sctl cluster upgrade process
+    <span class="md-ellipsis">
+      k0sctl cluster upgrade process
+    </span>
   </a>
   
 </li>
@@ -1897,14 +1903,18 @@
       
         <li class="md-nav__item">
   <a href="#upgrade-a-k0s-node-locally" class="md-nav__link">
-    Upgrade a k0s node locally
+    <span class="md-ellipsis">
+      Upgrade a k0s node locally
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#upgrade-a-k0s-cluster-using-k0sctl" class="md-nav__link">
-    Upgrade a k0s cluster using k0sctl
+    <span class="md-ellipsis">
+      Upgrade a k0s cluster using k0sctl
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="Upgrade a k0s cluster using k0sctl">
@@ -1912,7 +1922,9 @@
         
           <li class="md-nav__item">
   <a href="#k0sctl-cluster-upgrade-process" class="md-nav__link">
-    k0sctl cluster upgrade process
+    <span class="md-ellipsis">
+      k0sctl cluster upgrade process
+    </span>
   </a>
   
 </li>
@@ -1977,7 +1989,7 @@
 <p>You can configure the desired cluster version in the k0sctl configuration by setting the value of <code>spec.k0s.version</code>:</p>
 <div class="highlight"><pre><span></span><code><span class="nt">spec</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">k0s</span><span class="p">:</span>
-<span class="w">    </span><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1.28.3+k0s.0</span>
+<span class="w">    </span><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1.28.4+k0s.0</span>
 </code></pre></div>
 <p>If you do not specify a version, k0sctl checks online for the latest version and defaults to it.</p>
 <div class="highlight"><pre><span></span><code>k0sctl<span class="w"> </span>apply
@@ -1995,7 +2007,7 @@ INFO<span class="o">[</span><span class="m">0027</span><span class="o">]</span><
 INFO<span class="o">[</span><span class="m">0027</span><span class="o">]</span><span class="w"> </span><span class="o">[</span>ssh<span class="o">]</span><span class="w"> </span><span class="m">10</span>.0.0.17:22:<span class="w"> </span>upgrade<span class="w"> </span>successful
 INFO<span class="o">[</span><span class="m">0027</span><span class="o">]</span><span class="w"> </span><span class="o">==</span>&gt;<span class="w"> </span>Running<span class="w"> </span>phase:<span class="w"> </span>Disconnect<span class="w"> </span>from<span class="w"> </span>hosts
 INFO<span class="o">[</span><span class="m">0027</span><span class="o">]</span><span class="w"> </span><span class="o">==</span>&gt;<span class="w"> </span>Finished<span class="w"> </span><span class="k">in</span><span class="w"> </span>27s
-INFO<span class="o">[</span><span class="m">0027</span><span class="o">]</span><span class="w"> </span>k0s<span class="w"> </span>cluster<span class="w"> </span>version<span class="w"> </span><span class="m">1</span>.28.3+k0s.0<span class="w"> </span>is<span class="w"> </span>now<span class="w"> </span>installed
+INFO<span class="o">[</span><span class="m">0027</span><span class="o">]</span><span class="w"> </span>k0s<span class="w"> </span>cluster<span class="w"> </span>version<span class="w"> </span><span class="m">1</span>.28.4+k0s.0<span class="w"> </span>is<span class="w"> </span>now<span class="w"> </span>installed
 INFO<span class="o">[</span><span class="m">0027</span><span class="o">]</span><span class="w"> </span>Tip:<span class="w"> </span>To<span class="w"> </span>access<span class="w"> </span>the<span class="w"> </span>cluster<span class="w"> </span>you<span class="w"> </span>can<span class="w"> </span>now<span class="w"> </span>fetch<span class="w"> </span>the<span class="w"> </span>admin<span class="w"> </span>kubeconfig<span class="w"> </span>using:
 INFO<span class="o">[</span><span class="m">0027</span><span class="o">]</span><span class="w">      </span>k0sctl<span class="w"> </span>kubeconfig
 </code></pre></div>
@@ -2083,7 +2095,7 @@ INFO<span class="o">[</span><span class="m">0027</span><span class="o">]</span><
     <script id="__config" type="application/json">{"base": "..", "features": ["toc.autohide", "search.suggest", "search.highlight"], "search": "../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"default": "stable", "provider": "mike"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.81fa17fe.min.js"></script>
+      <script src="../assets/javascripts/bundle.6c14ae12.min.js"></script>
       
     
   </body>
