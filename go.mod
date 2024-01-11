@@ -32,7 +32,7 @@ require (
 	github.com/imdario/mergo v0.3.16
 	github.com/k0sproject/bootloose v0.7.2
 	github.com/k0sproject/dig v0.2.0
-	github.com/k0sproject/version v0.4.2
+	github.com/k0sproject/version v0.5.0
 	github.com/kardianos/service v1.2.2
 	github.com/logrusorgru/aurora/v3 v3.0.0
 	github.com/mesosphere/toml-merge v0.2.0
