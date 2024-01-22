@@ -2275,7 +2275,7 @@ sudo<span class="w"> </span>k0s<span class="w"> </span>start
 <h2 id="configuring-k0s-via-k0sctl">Configuring k0s via k0sctl<a class="headerlink" href="#configuring-k0s-via-k0sctl" title="Permanent link">#</a></h2>
 <p>k0sctl can deploy your configuration options at cluster creation time. Your
 options should be placed in the <code>spec.k0s.config</code> section of the k0sctl's
-configuration file. See the section on how to install <a href="../k0sctl-install">k0s via
+configuration file. See the section on how to install <a href="../k0sctl-install/">k0s via
 k0sctl</a> and the <a href="https://github.com/k0sproject/k0sctl/blob/main/README.md">k0sctl README</a> for more information.</p>
 <h2 id="configuration-file-reference">Configuration file reference<a class="headerlink" href="#configuration-file-reference" title="Permanent link">#</a></h2>
 <p><strong>CAUTION</strong>: As many of the available options affect items deep in the stack, you should fully understand the correlation between the configuration file components and your specific environment before making any changes.</p>
@@ -2415,6 +2415,42 @@ k0sctl</a> and the <a href="https://github.com/k0sproject/k0sctl/blob/main/READM
 <tr>
 <td><code>kine.dataSource</code></td>
 <td><a href="https://github.com/k3s-io/kine">kine</a> datasource URL.</td>
+</tr>
+<tr>
+<td><code>etcd.externalCluster</code></td>
+<td>Configuration when etcd is externally managed, i.e. running on dedicated nodes. See <a href="#specstorageetcdexternalcluster"><code>spec.storage.etcd.externalCluster</code></a></td>
+</tr>
+</tbody>
+</table>
+<h4 id="specstorageetcdexternalcluster"><code>spec.storage.etcd.externalCluster</code><a class="headerlink" href="#specstorageetcdexternalcluster" title="Permanent link">#</a></h4>
+<p>k0s can also work with externally managed Etcd cluster. If this is configured, k0s will NOT set up etcd, it has to be managed manually.</p>
+<table>
+<thead>
+<tr>
+<th>Element</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>endpoints</code></td>
+<td>Array of Etcd endpoints to use.</td>
+</tr>
+<tr>
+<td><code>etcdPrefix</code></td>
+<td>Prefix to use for this cluster. The same external Etcd cluster can be used for several k0s clusters, each prefixed with unique prefix to store data with.</td>
+</tr>
+<tr>
+<td><code>caFile</code></td>
+<td>CaFile is the host path to a file with Etcd cluster CA certificate.</td>
+</tr>
+<tr>
+<td><code>clientCertFile</code></td>
+<td>ClientCertFile is the host path to a file with TLS certificate for etcd client.</td>
+</tr>
+<tr>
+<td><code>clientKeyFile</code></td>
+<td>ClientKeyFile is the host path to a file with TLS key for etcd client.</td>
 </tr>
 </tbody>
 </table>
@@ -2620,9 +2656,7 @@ CALICO_IPV6POOL_CIDR:<span class="w"> </span><span class="s2">&quot;{{ spec.netw
 <span class="w">  </span><span class="nt">udpTimeout</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0s</span>
 </code></pre></div>
 <h4 id="specnetworknodelocalloadbalancing"><code>spec.network.nodeLocalLoadBalancing</code><a class="headerlink" href="#specnetworknodelocalloadbalancing" title="Permanent link">#</a></h4>
-<p>Configuration options related to k0s's <a href="../nllb">node-local load balancing</a> feature.</p>
-<p><strong>Note:</strong> This feature is experimental! Expect instabilities and/or breaking
-changes.</p>
+<p>Configuration options related to k0s's <a href="../nllb/">node-local load balancing</a> feature.</p>
 <table>
 <thead>
 <tr>
@@ -2873,7 +2907,7 @@ The default value <code>external</code> makes no storage deployed.</p>
 users to build a minimal Kubernetes control plane and use what ever components
 they need to fulfill their need for the control plane. Disabling the system
 components happens through a command line flag for the controller process:</p>
-<div class="highlight"><pre><span></span><code>--disable-components<span class="w"> </span>strings<span class="w">                     </span>disable<span class="w"> </span>components<span class="w"> </span><span class="o">(</span>valid<span class="w"> </span>items:<span class="w"> </span>api-config,autopilot,control-api,coredns,csr-approver,endpoint-reconciler,helm,konnectivity-server,kube-controller-manager,kube-proxy,kube-scheduler,metrics-server,network-provider,node-role,system-rbac,worker-config<span class="o">)</span>
+<div class="highlight"><pre><span></span><code>--disable-components strings                     disable components (valid items: autopilot,control-api,coredns,csr-approver,endpoint-reconciler,helm,konnectivity-server,kube-controller-manager,kube-proxy,kube-scheduler,metrics-server,network-provider,node-role,system-rbac,worker-config)
 </code></pre></div>
 <p><strong>Note:</strong> As of k0s 1.26, the kubelet-config component has been replaced by the
 worker-config component. k0s will issue a warning when the old component name is
