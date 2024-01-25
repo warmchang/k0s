@@ -12,28 +12,28 @@
         <meta name="author" content="Mirantis, Inc.">
       
       
-        <link rel="canonical" href="https://docs.k0sproject.io/head/experimental-windows/">
+        <link rel="canonical" href="https://docs.k0sproject.io/head/examples/openebs/">
       
       
-        <link rel="prev" href="../k0s-in-docker/">
+        <link rel="prev" href="../gitops-flux/">
       
       
-        <link rel="next" href="../raspberry-pi4/">
+        <link rel="next" href="../../FAQ/">
       
       
-      <link rel="icon" href="../img/k0s_social.png">
+      <link rel="icon" href="../../img/k0s_social.png">
       <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.5">
     
     
       
-        <title>Windows (experimental) - Documentation</title>
+        <title>OpenEBS storage - Documentation</title>
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.50c56a3b.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.50c56a3b.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -52,9 +52,9 @@
       
     
     
-      <link rel="stylesheet" href="../stylesheets/extra.css">
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
     
-    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-JMV1409T2T"></script>
@@ -87,7 +87,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#run-k0s-worker-nodes-in-windows" class="md-skip">
+        <a href="#openebs" class="md-skip">
           Skip to content
         </a>
       
@@ -102,7 +102,7 @@
             <div class="md-banner__inner md-grid md-typeset">
               
   You are not currently viewing the documentation for the current stable release of k0s.
-  <a href="../..">
+  <a href="../../..">
     <strong>Click here to go to the documentation of the current stable release.</strong>
   </a>
 
@@ -119,9 +119,9 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href=".." title="Documentation" class="md-header__button md-logo" aria-label="Documentation" data-md-component="logo">
+    <a href="../.." title="Documentation" class="md-header__button md-logo" aria-label="Documentation" data-md-component="logo">
       
-  <img src="../img/k0s_social.png" alt="logo">
+  <img src="../../img/k0s_social.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -138,7 +138,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Windows (experimental)
+              OpenEBS storage
             
           </span>
         </div>
@@ -253,9 +253,9 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="Documentation" class="md-nav__button md-logo" aria-label="Documentation" data-md-component="logo">
+    <a href="../.." title="Documentation" class="md-nav__button md-logo" aria-label="Documentation" data-md-component="logo">
       
-  <img src="../img/k0s_social.png" alt="logo">
+  <img src="../../img/k0s_social.png" alt="logo">
 
     </a>
     Documentation
@@ -282,7 +282,7 @@
   
   
     <li class="md-nav__item">
-      <a href=".." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -299,21 +299,19 @@
       
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
@@ -327,7 +325,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             Installation
@@ -341,7 +339,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../install/" class="md-nav__link">
+      <a href="../../install/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -362,7 +360,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../k0sctl-install/" class="md-nav__link">
+      <a href="../../k0sctl-install/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -380,21 +378,19 @@
                 
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
         
           
           <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
@@ -408,7 +404,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_3">
             <span class="md-nav__icon md-icon"></span>
             Alternative Methods
@@ -422,7 +418,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../k0s-multi-node/" class="md-nav__link">
+      <a href="../../k0s-multi-node/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -443,7 +439,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../k0s-in-docker/" class="md-nav__link">
+      <a href="../../k0s-in-docker/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -461,30 +457,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Windows (experimental)
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../experimental-windows/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -493,119 +469,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#prerequisites" class="md-nav__link">
-    <span class="md-ellipsis">
-      Prerequisites
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#run-k0s" class="md-nav__link">
-    <span class="md-ellipsis">
-      Run k0s
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#configuration" class="md-nav__link">
-    <span class="md-ellipsis">
-      Configuration
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Configuration">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#strict-affinity" class="md-nav__link">
-    <span class="md-ellipsis">
-      Strict-affinity
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#network-connectivity-in-aws" class="md-nav__link">
-    <span class="md-ellipsis">
-      Network connectivity in AWS
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#hacks" class="md-nav__link">
-    <span class="md-ellipsis">
-      Hacks
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#useful-commands" class="md-nav__link">
-    <span class="md-ellipsis">
-      Useful commands
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Useful commands">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#run-pod-with-cmdexe-shell" class="md-nav__link">
-    <span class="md-ellipsis">
-      Run pod with cmd.exe shell
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#manifest-for-pod-with-iis-web-server" class="md-nav__link">
-    <span class="md-ellipsis">
-      Manifest for pod with IIS web-server
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -618,7 +481,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../raspberry-pi4/" class="md-nav__link">
+      <a href="../../raspberry-pi4/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -639,7 +502,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../examples/ansible-playbook/" class="md-nav__link">
+      <a href="../ansible-playbook/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -660,7 +523,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../airgap-install/" class="md-nav__link">
+      <a href="../../airgap-install/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -681,7 +544,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../custom-ca/" class="md-nav__link">
+      <a href="../../custom-ca/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -710,7 +573,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../system-requirements/" class="md-nav__link">
+      <a href="../../system-requirements/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -731,7 +594,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../external-runtime-deps/" class="md-nav__link">
+      <a href="../../external-runtime-deps/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -752,7 +615,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../verifying-signs/" class="md-nav__link">
+      <a href="../../verifying-signs/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -817,7 +680,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../upgrade/" class="md-nav__link">
+      <a href="../../upgrade/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -838,7 +701,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../backup/" class="md-nav__link">
+      <a href="../../backup/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -859,7 +722,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../remove_controller/" class="md-nav__link">
+      <a href="../../remove_controller/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -880,7 +743,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../reset/" class="md-nav__link">
+      <a href="../../reset/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -945,7 +808,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../configuration/" class="md-nav__link">
+      <a href="../../configuration/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -966,7 +829,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../dynamic-configuration/" class="md-nav__link">
+      <a href="../../dynamic-configuration/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -987,7 +850,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../configuration-validation/" class="md-nav__link">
+      <a href="../../configuration-validation/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1008,7 +871,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../worker-node-config/" class="md-nav__link">
+      <a href="../../worker-node-config/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1029,7 +892,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../networking/" class="md-nav__link">
+      <a href="../../networking/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1050,7 +913,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../runtime/" class="md-nav__link">
+      <a href="../../runtime/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1071,7 +934,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../storage/" class="md-nav__link">
+      <a href="../../storage/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1092,7 +955,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../system-monitoring/" class="md-nav__link">
+      <a href="../../system-monitoring/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1113,7 +976,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../manifests/" class="md-nav__link">
+      <a href="../../manifests/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1134,7 +997,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../helm-charts/" class="md-nav__link">
+      <a href="../../helm-charts/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1155,7 +1018,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../cloud-providers/" class="md-nav__link">
+      <a href="../../cloud-providers/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1176,7 +1039,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../dual-stack/" class="md-nav__link">
+      <a href="../../dual-stack/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1197,7 +1060,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../high-availability/" class="md-nav__link">
+      <a href="../../high-availability/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1218,7 +1081,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../nllb/" class="md-nav__link">
+      <a href="../../nllb/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1239,7 +1102,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../shell-completion/" class="md-nav__link">
+      <a href="../../shell-completion/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1260,7 +1123,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../user-management/" class="md-nav__link">
+      <a href="../../user-management/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1281,7 +1144,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../environment-variables/" class="md-nav__link">
+      <a href="../../environment-variables/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1302,7 +1165,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../examples/oidc/oidc-cluster-configuration/" class="md-nav__link">
+      <a href="../oidc/oidc-cluster-configuration/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1323,7 +1186,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../selinux/" class="md-nav__link">
+      <a href="../../selinux/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1344,7 +1207,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../podsecurity/" class="md-nav__link">
+      <a href="../../podsecurity/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1365,7 +1228,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../reinstall-k0sctl/" class="md-nav__link">
+      <a href="../../reinstall-k0sctl/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1430,7 +1293,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../autopilot/" class="md-nav__link">
+      <a href="../../autopilot/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1451,7 +1314,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../autopilot-multicommand/" class="md-nav__link">
+      <a href="../../autopilot-multicommand/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1476,19 +1339,21 @@
       
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
         
           
           <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
@@ -1502,7 +1367,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_6">
             <span class="md-nav__icon md-icon"></span>
             Extensions
@@ -1516,7 +1381,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../examples/metallb-loadbalancer/" class="md-nav__link">
+      <a href="../metallb-loadbalancer/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1537,7 +1402,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../examples/nginx-ingress/" class="md-nav__link">
+      <a href="../nginx-ingress/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1558,7 +1423,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../examples/traefik-ingress/" class="md-nav__link">
+      <a href="../traefik-ingress/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1579,7 +1444,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../examples/ambassador-ingress/" class="md-nav__link">
+      <a href="../ambassador-ingress/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1600,7 +1465,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../examples/rook-ceph/" class="md-nav__link">
+      <a href="../rook-ceph/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1621,7 +1486,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../examples/gitops-flux/" class="md-nav__link">
+      <a href="../gitops-flux/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1639,10 +1504,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../examples/openebs/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    OpenEBS storage
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -1651,6 +1536,68 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#installing-openebs-from-scratch" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installing OpenEBS from scratch
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#migrating-bundled-openebs-to-helm-extension" class="md-nav__link">
+    <span class="md-ellipsis">
+      Migrating bundled OpenEBS to helm extension
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#usage" class="md-nav__link">
+    <span class="md-ellipsis">
+      Usage
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Usage">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1707,7 +1654,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../FAQ/" class="md-nav__link">
+      <a href="../../FAQ/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1728,7 +1675,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../troubleshooting/" class="md-nav__link">
+      <a href="../../troubleshooting/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1793,7 +1740,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../architecture/" class="md-nav__link">
+      <a href="../../architecture/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1814,7 +1761,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../cis_benchmark/" class="md-nav__link">
+      <a href="../../cis_benchmark/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1842,7 +1789,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../releases/" class="md-nav__link">
+      <a href="../../releases/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1862,7 +1809,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../commercial-support/" class="md-nav__link">
+      <a href="../../commercial-support/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1919,7 +1866,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../contributors/overview/" class="md-nav__link">
+      <a href="../../contributors/overview/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1940,7 +1887,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../contributors/github_workflow/" class="md-nav__link">
+      <a href="../../contributors/github_workflow/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1961,7 +1908,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../contributors/testing/" class="md-nav__link">
+      <a href="../../contributors/testing/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1982,7 +1929,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../internal/publishing_docs_using_mkdocs/" class="md-nav__link">
+      <a href="../../internal/publishing_docs_using_mkdocs/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2030,88 +1977,37 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#prerequisites" class="md-nav__link">
+  <a href="#installing-openebs-from-scratch" class="md-nav__link">
     <span class="md-ellipsis">
-      Prerequisites
+      Installing OpenEBS from scratch
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#run-k0s" class="md-nav__link">
+  <a href="#migrating-bundled-openebs-to-helm-extension" class="md-nav__link">
     <span class="md-ellipsis">
-      Run k0s
+      Migrating bundled OpenEBS to helm extension
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#configuration" class="md-nav__link">
+  <a href="#usage" class="md-nav__link">
     <span class="md-ellipsis">
-      Configuration
+      Usage
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Configuration">
+    <nav class="md-nav" aria-label="Usage">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#strict-affinity" class="md-nav__link">
+  <a href="#example" class="md-nav__link">
     <span class="md-ellipsis">
-      Strict-affinity
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#network-connectivity-in-aws" class="md-nav__link">
-    <span class="md-ellipsis">
-      Network connectivity in AWS
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#hacks" class="md-nav__link">
-    <span class="md-ellipsis">
-      Hacks
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#useful-commands" class="md-nav__link">
-    <span class="md-ellipsis">
-      Useful commands
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Useful commands">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#run-pod-with-cmdexe-shell" class="md-nav__link">
-    <span class="md-ellipsis">
-      Run pod with cmd.exe shell
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#manifest-for-pod-with-iis-web-server" class="md-nav__link">
-    <span class="md-ellipsis">
-      Manifest for pod with IIS web-server
+      Example
     </span>
   </a>
   
@@ -2137,55 +2033,141 @@
                   
 
 
-<h1 id="run-k0s-worker-nodes-in-windows">Run k0s worker nodes in Windows<a class="headerlink" href="#run-k0s-worker-nodes-in-windows" title="Permanent link">#</a></h1>
-<p><strong>IMPORTANT</strong>: Windows support for k0s is under active development and <strong>must be</strong> considered experimental.</p>
-<h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">#</a></h2>
-<p>The cluster must be running at least one worker node and control plane on Linux. You can use Windows to run additional worker nodes.</p>
-<h2 id="run-k0s">Run k0s<a class="headerlink" href="#run-k0s" title="Permanent link">#</a></h2>
-<p><strong>Note</strong>: The k0s.exe supervises kubelet.exe and kube-proxy.exe.</p>
-<p>During the first run, the calico install script is created as <code>C:\bootstrap.ps1</code>. This bootstrap script downloads the calico binaries, builds pause container and sets up vSwitch settings.</p>
-<p>Install Mirantis Container Runtime on the Windows node(s), as it is required for the initial Calico set up).</p>
-<div class="highlight"><pre><span></span><code>k0s<span class="w"> </span>worker<span class="w"> </span>--cri-socket<span class="o">=</span>docker:tcp://127.0.0.1:2375<span class="w"> </span>--cidr-range<span class="o">=</span>&lt;cidr_range&gt;<span class="w"> </span>--cluster-dns<span class="o">=</span>&lt;clusterdns&gt;<span class="w"> </span>--api-server<span class="o">=</span>&lt;k0s<span class="w"> </span>api&gt;<span class="w"> </span>&lt;token&gt;
+<h1 id="openebs">OpenEBS<a class="headerlink" href="#openebs" title="Permanent link">#</a></h1>
+<p>This tutorial covers the installation of OpenEBS as a Helm extension, both from
+scratch and how to migrate it from a storage extension.</p>
+<h2 id="installing-openebs-from-scratch">Installing OpenEBS from scratch<a class="headerlink" href="#installing-openebs-from-scratch" title="Permanent link">#</a></h2>
+<p><strong>WARNING</strong>: Do not configure OpenEBS as both a storage extension and a Helm
+extension. It's considered an invalid configuration and k0s will entirely ignore
+the configuration to prevent accidental upgrades or downgrades. The chart
+objects defined in the API will still behave normally.</p>
+<p>OpenEBS can be installed as a helm chart by adding it as an extension to your configuration:</p>
+<div class="highlight"><pre><span></span><code><span class="w">  </span><span class="nt">extensions</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">helm</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">repositories</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">openebs-internal</span>
+<span class="w">        </span><span class="nt">url</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://openebs.github.io/charts</span>
+<span class="w">      </span><span class="nt">charts</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">openebs</span>
+<span class="w">        </span><span class="nt">chartname</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">openebs-internal/openebs</span>
+<span class="w">        </span><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;3.9.0&quot;</span>
+<span class="w">        </span><span class="nt">namespace</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">openebs</span>
+<span class="w">        </span><span class="nt">order</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+<span class="w">        </span><span class="nt">values</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span>
+<span class="w">          </span><span class="no">localprovisioner:</span>
+<span class="w">            </span><span class="no">hostpathClass:</span>
+<span class="w">              </span><span class="no">enabled: true</span>
+<span class="w">              </span><span class="no">isDefaultClass: false</span>
 </code></pre></div>
-<p>You must initiate the Cluster control with the correct config.</p>
-<h2 id="configuration">Configuration<a class="headerlink" href="#configuration" title="Permanent link">#</a></h2>
-<h3 id="strict-affinity">Strict-affinity<a class="headerlink" href="#strict-affinity" title="Permanent link">#</a></h3>
-<p>You must enable strict affinity to run the windows node.</p>
-<p>If the <code>spec.network.calico.withWindowsNodes</code> field is set to <code>true</code> (it is set to <code>false</code> by default) the additional calico related manifest <code>/var/lib/k0s/manifests/calico/calico-IPAMConfig-ipamconfig.yaml</code> is created with the following values:</p>
-<div class="highlight"><pre><span></span><code><span class="nn">---</span>
-<span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">crd.projectcalico.org/v1</span>
-<span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">IPAMConfig</span>
-<span class="nt">metadata</span><span class="p">:</span>
-<span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">default</span>
-<span class="nt">spec</span><span class="p">:</span>
-<span class="w">  </span><span class="nt">strictAffinity</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<p>If you want OpenEBS to be your default storage class, set <code>isDefaultClass</code> to <code>true</code>.</p>
+<h2 id="migrating-bundled-openebs-to-helm-extension">Migrating bundled OpenEBS to helm extension<a class="headerlink" href="#migrating-bundled-openebs-to-helm-extension" title="Permanent link">#</a></h2>
+<p>The bundled OpenEBS extension is already a helm extension installed as a
+<code>chart.helm.k0sproject.io</code>. For this reason, all we have to do is to remove the
+manifests and to clean up the object. However, this must be done in a specific order
+to prevent data loss.</p>
+<p><strong>WARNING</strong>: Not following the steps in the precise order presented by the
+documentation may provoke data loss.</p>
+<p>The first step to perform the migration is to disable the <code>applier-manager</code>
+component on all controllers. For each controller, restart the controller
+with the flag <code>--disable-components=applier-manager</code>. If you already had this flag,
+set it to <code>--disable-components=&lt;previous value&gt;,applier-manager</code>.</p>
+<p>Once the <code>applier-manager</code> is disabled in every running controller, you need to modify
+the configuration to use <code>external_storage</code> instead of <code>openebs_local_storage</code>.</p>
+<p>If you are using <a href="../../dynamic-configuration/">dynamic configuration</a>, you can
+change it with this command:</p>
+<div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>patch<span class="w"> </span>clusterconfig<span class="w"> </span>-n<span class="w"> </span>kube-system<span class="w">  </span>k0s<span class="w"> </span>--patch<span class="w"> </span><span class="s1">&#39;{&quot;spec&quot;:{&quot;extensions&quot;:{&quot;storage&quot;:{&quot;type&quot;:&quot;external_storage&quot;}}}}&#39;</span><span class="w"> </span>--type<span class="o">=</span>merge
 </code></pre></div>
-<p>Alternately, you can manually execute calicoctl:</p>
-<div class="highlight"><pre><span></span><code>calicoctl<span class="w"> </span>ipam<span class="w"> </span>configure<span class="w"> </span>--strictaffinity<span class="o">=</span><span class="nb">true</span>
+<p>If you are using a static configuration file, replace <code>spec.extensions.storage.type</code>
+from <code>openebs_local_storage</code> to <code>external_storage</code> in all control plane nodes and
+restart all the control plane nodes one by one.</p>
+<p>When the configuration is set to <code>external_storage</code> and the servers are
+restarted, you must manage the it as a chart object in the API:</p>
+<div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>get<span class="w"> </span>chart<span class="w"> </span>-n<span class="w"> </span>kube-system<span class="w"> </span>k0s-addon-chart-openebs<span class="w"> </span>-o<span class="w"> </span>yaml
 </code></pre></div>
-<h3 id="network-connectivity-in-aws">Network connectivity in AWS<a class="headerlink" href="#network-connectivity-in-aws" title="Permanent link">#</a></h3>
-<p>Disable the <code>Change Source/Dest. Check</code> option for the network interface attached to your EC2 instance. In AWS, the console option for the network interface is in the <strong>Actions</strong> menu.</p>
-<h3 id="hacks">Hacks<a class="headerlink" href="#hacks" title="Permanent link">#</a></h3>
-<p>k0s offers the following CLI arguments in lieu of a formal means for passing cluster settings from controller plane to worker:</p>
-<ul>
-<li>cidr-range</li>
-<li>cluster-dns</li>
-<li>api-server</li>
-</ul>
-<h2 id="useful-commands">Useful commands<a class="headerlink" href="#useful-commands" title="Permanent link">#</a></h2>
-<h3 id="run-pod-with-cmdexe-shell">Run pod with cmd.exe shell<a class="headerlink" href="#run-pod-with-cmdexe-shell" title="Permanent link">#</a></h3>
-<div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>run<span class="w"> </span>win<span class="w"> </span>--image<span class="o">=</span>hello-world:nanoserver<span class="w"> </span>--command<span class="o">=</span><span class="nb">true</span><span class="w"> </span>-i<span class="w"> </span>--attach<span class="o">=</span><span class="nb">true</span><span class="w"> </span>--<span class="w"> </span>cmd.exe
+<p>First, remove the labels and annotations related to the stack applier:</p>
+<div class="highlight"><pre><span></span><code>k0s<span class="w"> </span>kc<span class="w"> </span>annotate<span class="w"> </span>-n<span class="w"> </span>kube-system<span class="w"> </span>chart<span class="w"> </span>k0s-addon-chart-openebs<span class="w"> </span>k0s.k0sproject.io/stack-checksum-
+k0s<span class="w"> </span>kc<span class="w"> </span>label<span class="w"> </span>-n<span class="w"> </span>kube-system<span class="w"> </span>chart<span class="w"> </span>k0s-addon-chart-openebs<span class="w"> </span>k0s.k0sproject.io/stack-
 </code></pre></div>
-<h3 id="manifest-for-pod-with-iis-web-server">Manifest for pod with IIS web-server<a class="headerlink" href="#manifest-for-pod-with-iis-web-server" title="Permanent link">#</a></h3>
+<p>After the annotations and labels are removed, remove the manifest file <strong>on each
+controller</strong>. This file is located in
+<code>&lt;k0s-data-dir&gt;/manifests/helm/&lt;number&gt;_helm_extension_openebs.yaml</code>, which in
+most installations defaults to
+<code>/var/lib/k0s/manifests/helm/0_helm_extension_openebs.yaml</code>.</p>
+<p><strong>WARNING</strong>: Not removing the old manifest file from all controllers may cause
+the manifest to be reapplied, reverting your changes and potentially casuing
+data loss.</p>
+<p>Finally, we want to re-enable the <code>applier-manager</code> and restart all controllers
+without the <code>--disable-components=applier-manager</code> flag.</p>
+<p>Once the migration is coplete, you'll be able to update the OpenEBS chart.
+Let's take v3.9.0 as an example:</p>
+<div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>patch<span class="w"> </span>chart<span class="w"> </span>-n<span class="w"> </span>kube-system<span class="w"> </span>k0s-addon-chart-openebs<span class="w"> </span>--patch<span class="w"> </span><span class="s1">&#39;{&quot;spec&quot;:{&quot;version&quot;:&quot;3.9.0&quot;}}&#39;</span><span class="w"> </span>--type<span class="o">=</span>merge
+</code></pre></div>
+<h2 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">#</a></h2>
+<p>Once installed, the cluster will have two storage classes available for you to use:</p>
+<div class="highlight"><pre><span></span><code>k0s<span class="w"> </span>kubectl<span class="w"> </span>get<span class="w"> </span>storageclass
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>NAME<span class="w">               </span>PROVISIONER<span class="w">        </span>RECLAIMPOLICY<span class="w">   </span>VOLUMEBINDINGMODE<span class="w">      </span>ALLOWVOLUMEEXPANSION<span class="w">   </span>AGE
+openebs-device<span class="w">     </span>openebs.io/local<span class="w">   </span>Delete<span class="w">          </span>WaitForFirstConsumer<span class="w">   </span><span class="nb">false</span><span class="w">                  </span>24s
+openebs-hostpath<span class="w">   </span>openebs.io/local<span class="w">   </span>Delete<span class="w">          </span>WaitForFirstConsumer<span class="w">   </span><span class="nb">false</span><span class="w">                  </span>24s
+</code></pre></div>
+<p>The <code>openebs-hostpath</code> is the storage class that maps to <code>/var/openebs/local</code>.</p>
+<p>The <code>openebs-device</code> is not configured and could be configured by <a href="../../manifests/">manifest deployer</a> accordingly to the <a href="https://docs.openebs.io/">OpenEBS documentation</a></p>
+<h3 id="example">Example<a class="headerlink" href="#example" title="Permanent link">#</a></h3>
+<p>Use following manifests as an example of pod with mounted volume:</p>
 <div class="highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1</span>
-<span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Pod</span>
+<span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">PersistentVolumeClaim</span>
 <span class="nt">metadata</span><span class="p">:</span>
-<span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">iis</span>
+<span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">nginx-pvc</span>
+<span class="w">  </span><span class="nt">namespace</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">default</span>
 <span class="nt">spec</span><span class="p">:</span>
-<span class="w">  </span><span class="nt">containers</span><span class="p">:</span>
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">iis</span>
-<span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mcr.microsoft.com/windows/servercore/iis</span>
-<span class="w">    </span><span class="nt">imagePullPolicy</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">IfNotPresent</span>
+<span class="w">  </span><span class="nt">accessModes</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ReadWriteOnce</span>
+<span class="w">  </span><span class="nt">storageClassName</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">openebs-hostpath</span>
+<span class="w">  </span><span class="nt">resources</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">requests</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">storage</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">5Gi</span>
+<span class="nn">---</span>
+<span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">apps/v1</span>
+<span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Deployment</span>
+<span class="nt">metadata</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">nginx</span>
+<span class="w">  </span><span class="nt">namespace</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">default</span>
+<span class="w">  </span><span class="nt">labels</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">app</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">nginx</span>
+<span class="nt">spec</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">selector</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">matchLabels</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">app</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">nginx</span>
+<span class="w">  </span><span class="nt">strategy</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Recreate</span>
+<span class="w">  </span><span class="nt">template</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">metadata</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">labels</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">app</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">nginx</span>
+<span class="w">    </span><span class="nt">spec</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">containers</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">nginx</span>
+<span class="w">        </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">nginx</span>
+<span class="w">        </span><span class="nt">volumeMounts</span><span class="p">:</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">persistent-storage</span>
+<span class="w">          </span><span class="nt">mountPath</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/var/lib/nginx</span>
+<span class="w">      </span><span class="nt">volumes</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">persistent-storage</span>
+<span class="w">        </span><span class="nt">persistentVolumeClaim</span><span class="p">:</span>
+<span class="w">          </span><span class="nt">claimName</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">nginx-pvc</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>k0s<span class="w"> </span>kubectl<span class="w"> </span>apply<span class="w"> </span>-f<span class="w"> </span>nginx.yaml
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>persistentvolumeclaim/nginx-pvc<span class="w"> </span>created
+deployment.apps/nginx<span class="w"> </span>created
+bash-5.1#<span class="w"> </span>k0s<span class="w"> </span>kc<span class="w"> </span>get<span class="w"> </span>pods
+NAME<span class="w">                    </span>READY<span class="w">   </span>STATUS<span class="w">    </span>RESTARTS<span class="w">   </span>AGE
+nginx-d95bcb7db-gzsdt<span class="w">   </span><span class="m">1</span>/1<span class="w">     </span>Running<span class="w">   </span><span class="m">0</span><span class="w">          </span>30s
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>k0s<span class="w"> </span>kubectl<span class="w"> </span>get<span class="w"> </span>pv
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>NAME<span class="w">                                       </span>CAPACITY<span class="w">   </span>ACCESS<span class="w"> </span>MODES<span class="w">   </span>RECLAIM<span class="w"> </span>POLICY<span class="w">   </span>STATUS<span class="w">   </span>CLAIM<span class="w">               </span>STORAGECLASS<span class="w">       </span>REASON<span class="w">   </span>AGE
+pvc-9a7fae2d-eb03-42c3-aaa9-1a807d5df12f<span class="w">   </span>5Gi<span class="w">        </span>RWO<span class="w">            </span>Delete<span class="w">           </span>Bound<span class="w">    </span>default/nginx-pvc<span class="w">   </span>openebs-hostpath<span class="w">            </span>30s
 </code></pre></div>
 
 
@@ -2276,10 +2258,10 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "..", "features": ["toc.autohide", "search.suggest", "search.highlight"], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"default": "stable", "provider": "mike"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["toc.autohide", "search.suggest", "search.highlight"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"default": "stable", "provider": "mike"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.c18c5fb9.min.js"></script>
+      <script src="../../assets/javascripts/bundle.c18c5fb9.min.js"></script>
       
     
   </body>
