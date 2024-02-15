@@ -22,7 +22,7 @@
       
       
       <link rel="icon" href="../img/k0s_social.png">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.5">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.9">
     
     
       
@@ -30,7 +30,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.50c56a3b.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.f2e4d321.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
@@ -307,10 +307,8 @@
     
     
     
-    
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
-        
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
@@ -386,10 +384,8 @@
     
     
     
-    
     <li class="md-nav__item md-nav__item--nested">
       
-        
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
@@ -679,6 +675,15 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#no-integration-with-name-service-switch-nss-apis" class="md-nav__link">
+    <span class="md-ellipsis">
+      No integration with Name Service Switch (NSS) APIs
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#external-hard-dependencies" class="md-nav__link">
     <span class="md-ellipsis">
       External hard dependencies
@@ -766,10 +771,8 @@
     
     
     
-    
     <li class="md-nav__item md-nav__item--nested">
       
-        
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
@@ -894,10 +897,8 @@
     
     
     
-    
     <li class="md-nav__item md-nav__item--nested">
       
-        
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
@@ -1379,10 +1380,8 @@
     
     
     
-    
     <li class="md-nav__item md-nav__item--nested">
       
-        
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
@@ -1465,10 +1464,8 @@
     
     
     
-    
     <li class="md-nav__item md-nav__item--nested">
       
-        
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
@@ -1656,10 +1653,8 @@
     
     
     
-    
     <li class="md-nav__item md-nav__item--nested">
       
-        
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
@@ -1742,10 +1737,8 @@
     
     
     
-    
     <li class="md-nav__item md-nav__item--nested">
       
-        
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
@@ -1868,10 +1861,8 @@
     
     
     
-    
     <li class="md-nav__item md-nav__item--nested">
       
-        
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" >
@@ -2044,6 +2035,15 @@
   <a href="#control-groups-cgroups" class="md-nav__link">
     <span class="md-ellipsis">
       Control Groups (cgroups)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#no-integration-with-name-service-switch-nss-apis" class="md-nav__link">
+    <span class="md-ellipsis">
+      No integration with Name Service Switch (NSS) APIs
     </span>
   </a>
   
@@ -2249,6 +2249,22 @@ and, if enabled as a module, to load the <code>configs</code> module: <code>modp
    containerd and cri-o will use blkio to track disk I/O and throttling in both
    cgroup v1 and v2.</li>
 </ul>
+<h3 id="no-integration-with-name-service-switch-nss-apis">No integration with Name Service Switch (NSS) APIs<a class="headerlink" href="#no-integration-with-name-service-switch-nss-apis" title="Permanent link">#</a></h3>
+<p>The k0s Linux binaries are by default statically linked against <a href="https://musl.libc.org/">musl libc</a>.
+This includes the binaries distributed on the GitHub releases pages. Static
+linking ensures that k0s can run seamlessly across a wide range of Linux
+environments by not requiring a specific standard C library to be installed on
+the host system. However, this design choice means that k0s cannot use <a href="https://www.gnu.org/software/libc/manual/html_node/Name-Service-Switch.html">glibc's
+NSS APIs</a>, which require dynamic linking.</p>
+<p>This limitation is particularly relevant when a system uses NSS plugins, such as
+<a href="https://www.freedesktop.org/software/systemd/man/latest/nss-myhostname.html">nss-myhostname</a>, for resolving network names like <code>localhost</code>. Systems lacking
+a dedicated stub resolver capable of handling <code>localhost</code> DNS queries
+specifically will encounter issues running k0s. To mitigate this, users are
+advised to either activate a stub DNS resolver, such as <code>systemd-resolved</code>, or
+to manually add <code>localhost</code> entries to the <code>/etc/hosts</code> file as shown below:</p>
+<div class="highlight"><pre><span></span><code>127.0.0.1 localhost
+::1 localhost
+</code></pre></div>
 <h3 id="external-hard-dependencies">External hard dependencies<a class="headerlink" href="#external-hard-dependencies" title="Permanent link">#</a></h3>
 <p>There are very few external tools that are needed or used.</p>
 <h4 id="mountumount">mount/umount<a class="headerlink" href="#mountumount" title="Permanent link">#</a></h4>
@@ -2259,7 +2275,7 @@ circumstances:</p>
 <h4 id="containerd-and-apparmor">containerd and AppArmor<a class="headerlink" href="#containerd-and-apparmor" title="Permanent link">#</a></h4>
 <p>In order to use containerd in conjunction with <a href="https://wiki.ubuntu.com/AppArmor">AppArmor</a>, it must be enabled in
 the kernel and the <code>/sbin/apparmor_parser</code> executable must be installed on the
-host, otherwise containerd will <a href="https://github.com/containerd/containerd/blob/v1.7.12/pkg/apparmor/apparmor_linux.go#L34-L45">disable</a> AppArmor support.</p>
+host, otherwise containerd will <a href="https://github.com/containerd/containerd/blob/v1.7.13/pkg/apparmor/apparmor_linux.go#L34-L45">disable</a> AppArmor support.</p>
 <h4 id="iptables">iptables<a class="headerlink" href="#iptables" title="Permanent link">#</a></h4>
 <p>iptables may be executed to detect if there are any existing iptables rules and
 if those are in legacy of nft mode. If iptables is not found, k0s will assume
@@ -2388,7 +2404,7 @@ Windows Server 2016. k0s states that it requires Windows Server 2019, though.
     <script id="__config" type="application/json">{"base": "..", "features": ["toc.autohide", "search.suggest", "search.highlight"], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"default": "stable", "provider": "mike"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.c18c5fb9.min.js"></script>
+      <script src="../assets/javascripts/bundle.8fd75fb4.min.js"></script>
       
     
   </body>
