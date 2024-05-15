@@ -22,7 +22,7 @@
       
       
       <link rel="icon" href="../img/k0s_social.png">
-      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.21">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.22">
     
     
       
@@ -30,7 +30,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.66ac8b77.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.732c4fb1.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
@@ -1691,6 +1691,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#iptables-veresion-mismatch" class="md-nav__link">
+    <span class="md-ellipsis">
+      iptables veresion mismatch
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#profiling" class="md-nav__link">
     <span class="md-ellipsis">
       Profiling
@@ -2076,6 +2085,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#iptables-veresion-mismatch" class="md-nav__link">
+    <span class="md-ellipsis">
+      iptables veresion mismatch
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#profiling" class="md-nav__link">
     <span class="md-ellipsis">
       Profiling
@@ -2204,6 +2222,12 @@ with etcd itself is not fully supported on ARM either.</p>
 <p>With this config you can start your controller as usual. Any workers will need to be started with</p>
 <div class="highlight"><pre><span></span><code>k0s<span class="w"> </span>worker<span class="w"> </span>--profile<span class="w"> </span>coreos<span class="w"> </span><span class="o">[</span>TOKEN<span class="o">]</span>
 </code></pre></div>
+<h2 id="iptables-veresion-mismatch">iptables veresion mismatch<a class="headerlink" href="#iptables-veresion-mismatch" title="Permanent link">#</a></h2>
+<p>If the running kernel has firewall rules created using an iptables version
+newer than the version shipped with k0s, the Kubernetes network will <a href="https://www.mirantis.com/blog/networking-problems-after-installing-kubernetes-1-25-or-after-upgrading-your-host-os-this-might-be-your-problem">not
+work</a>.</p>
+<p>To solve this, make sure that the iptables version used on host is same version
+as bundled with k0s. The k0s version is found in  <code>/var/lib/k0s/bin</code>.</p>
 <h2 id="profiling">Profiling<a class="headerlink" href="#profiling" title="Permanent link">#</a></h2>
 <p>We drop any debug related information and symbols from the compiled binary by utilzing <code>-w -s</code> linker flags.</p>
 <p>To keep those symbols use <code>DEBUG</code> env variable:</p>
@@ -2327,7 +2351,7 @@ recommended workaround.</p>
     <script id="__config" type="application/json">{"base": "..", "features": ["toc.autohide", "search.suggest", "search.highlight"], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"default": "stable", "provider": "mike"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.a7c05c9e.min.js"></script>
+      <script src="../assets/javascripts/bundle.5cfa9459.min.js"></script>
       
     
   </body>
