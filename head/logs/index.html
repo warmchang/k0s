@@ -12,13 +12,13 @@
         <meta name="author" content="Mirantis, Inc.">
       
       
-        <link rel="canonical" href="https://docs.k0sproject.io/head/k0s-multi-node/">
+        <link rel="canonical" href="https://docs.k0sproject.io/head/logs/">
       
       
-        <link rel="prev" href="../k0sctl-install/">
+        <link rel="prev" href="../FAQ/">
       
       
-        <link rel="next" href="../k0s-in-docker/">
+        <link rel="next" href="../troubleshooting/">
       
       
       <link rel="icon" href="../img/k0s_social.png">
@@ -26,7 +26,7 @@
     
     
       
-        <title>Manual (advanced) - Documentation</title>
+        <title>Logs - Documentation</title>
       
     
     
@@ -87,7 +87,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#manual-install-advanced" class="md-skip">
+        <a href="#logs" class="md-skip">
           Skip to content
         </a>
       
@@ -138,7 +138,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Manual (advanced)
+              Logs
             
           </span>
         </div>
@@ -299,19 +299,17 @@
       
   
   
-    
   
   
-  
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
@@ -325,7 +323,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             Installation
@@ -378,19 +376,17 @@
                 
   
   
-    
   
   
-  
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
         
           
           <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
@@ -404,7 +400,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_3">
             <span class="md-nav__icon md-icon"></span>
             Alternative Methods
@@ -415,30 +411,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Manual (advanced)
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../k0s-multi-node/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -447,122 +423,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#prerequisites" class="md-nav__link">
-    <span class="md-ellipsis">
-      Prerequisites
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#install-k0s" class="md-nav__link">
-    <span class="md-ellipsis">
-      Install k0s
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Install k0s">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1-download-k0s" class="md-nav__link">
-    <span class="md-ellipsis">
-      1. Download k0s
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2-bootstrap-a-controller-node" class="md-nav__link">
-    <span class="md-ellipsis">
-      2. Bootstrap a controller node
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3-create-a-join-token" class="md-nav__link">
-    <span class="md-ellipsis">
-      3. Create a join token
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#4-add-workers-to-the-cluster" class="md-nav__link">
-    <span class="md-ellipsis">
-      4. Add workers to the cluster
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#5-add-controllers-to-the-cluster" class="md-nav__link">
-    <span class="md-ellipsis">
-      5. Add controllers to the cluster
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#6-check-k0s-status" class="md-nav__link">
-    <span class="md-ellipsis">
-      6. Check k0s status
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#7-access-your-cluster" class="md-nav__link">
-    <span class="md-ellipsis">
-      7. Access your cluster
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#next-steps" class="md-nav__link">
-    <span class="md-ellipsis">
-      Next Steps
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1679,17 +1539,19 @@
       
   
   
+    
   
   
+  
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" checked>
         
           
           <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
@@ -1703,7 +1565,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_7">
             <span class="md-nav__icon md-icon"></span>
             Troubleshooting
@@ -1735,10 +1597,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../logs/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Logs
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -1747,6 +1629,59 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#where-are-the-logs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Where are the logs?
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Where are the logs?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#systemd-based-setups" class="md-nav__link">
+    <span class="md-ellipsis">
+      systemd based setups
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#openrc-based-setups" class="md-nav__link">
+    <span class="md-ellipsis">
+      openRC based setups
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -2099,82 +2034,28 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#prerequisites" class="md-nav__link">
+  <a href="#where-are-the-logs" class="md-nav__link">
     <span class="md-ellipsis">
-      Prerequisites
+      Where are the logs?
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#install-k0s" class="md-nav__link">
-    <span class="md-ellipsis">
-      Install k0s
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Install k0s">
+    <nav class="md-nav" aria-label="Where are the logs?">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#1-download-k0s" class="md-nav__link">
+  <a href="#systemd-based-setups" class="md-nav__link">
     <span class="md-ellipsis">
-      1. Download k0s
+      systemd based setups
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#2-bootstrap-a-controller-node" class="md-nav__link">
+  <a href="#openrc-based-setups" class="md-nav__link">
     <span class="md-ellipsis">
-      2. Bootstrap a controller node
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3-create-a-join-token" class="md-nav__link">
-    <span class="md-ellipsis">
-      3. Create a join token
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#4-add-workers-to-the-cluster" class="md-nav__link">
-    <span class="md-ellipsis">
-      4. Add workers to the cluster
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#5-add-controllers-to-the-cluster" class="md-nav__link">
-    <span class="md-ellipsis">
-      5. Add controllers to the cluster
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#6-check-k0s-status" class="md-nav__link">
-    <span class="md-ellipsis">
-      6. Check k0s status
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#7-access-your-cluster" class="md-nav__link">
-    <span class="md-ellipsis">
-      7. Access your cluster
+      openRC based setups
     </span>
   </a>
   
@@ -2182,15 +2063,6 @@
         
       </ul>
     </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#next-steps" class="md-nav__link">
-    <span class="md-ellipsis">
-      Next Steps
-    </span>
-  </a>
   
 </li>
       
@@ -2209,115 +2081,17 @@
                   
 
 
-<h1 id="manual-install-advanced">Manual Install (Advanced)<a class="headerlink" href="#manual-install-advanced" title="Permanent link">#</a></h1>
-<p>You can manually set up k0s nodes by creating a multi-node cluster that is locally managed on each node. This involves several steps, to first install each node separately, and to then connect the node together using access tokens.</p>
-<h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">#</a></h2>
-<p><strong>Note</strong>: Before proceeding, make sure to review the <a href="../system-requirements/">System Requirements</a>.</p>
-<p>Though the Manual Install material is written for Debian/Ubuntu, you can use it for any Linux distro that is running either a Systemd or OpenRC init system.</p>
-<p>You can speed up the use of the <code>k0s</code> command by enabling <a href="../shell-completion/">shell completion</a>.</p>
-<h2 id="install-k0s">Install k0s<a class="headerlink" href="#install-k0s" title="Permanent link">#</a></h2>
-<h3 id="1-download-k0s">1. Download k0s<a class="headerlink" href="#1-download-k0s" title="Permanent link">#</a></h3>
-<p>Run the k0s download script to download the latest stable version of k0s and make it executable from /usr/bin/k0s.</p>
-<div class="highlight"><pre><span></span><code>curl<span class="w"> </span>--proto<span class="w"> </span><span class="s1">&#39;=https&#39;</span><span class="w"> </span>--tlsv1.2<span class="w"> </span>-sSf<span class="w"> </span>https://get.k0s.sh<span class="w"> </span><span class="p">|</span><span class="w"> </span>sudo<span class="w"> </span>sh
+<h1 id="logs">Logs<a class="headerlink" href="#logs" title="Permanent link">#</a></h1>
+<p>k0s runs most of the Kubernetes and other system components as plain Linux child processes. As it acts as a watchdog for the child processes it also combines the logs for all such processes into its own log stream.</p>
+<p>k0s adds a "selector" to each components log stream so it is easier to distinguish logs from various components. For example the log stream from kubelet is enhanced with a selector <code>component=kubelet</code>:</p>
+<div class="highlight"><pre><span></span><code>Jul 08 08:46:25 worker-kppzr-lls2q k0s[1766]: time=&quot;2024-07-08 08:46:25&quot; level=info msg=&quot;I0708 08:46:25.876821    1814 operation_generator.go:721] \&quot;MountVolume.SetUp succeeded for volume \\\&quot;kube-api-access-7tfxw\\\&quot; (UniqueName: \\\&quot;kubernetes.io/projected/ca514728-a1de-4408-9be5-8b36ee896752-kube-api-access-7tfxw\\\&quot;) pod \\\&quot;node-shell-a16894ee-eb67-4865-8964-44ca5c87e18d\\\&quot; (UID: \\\&quot;ca514728-a1de-4408-9be5-8b36ee896752\\\&quot;) \&quot; pod=\&quot;kube-system/node-shell-a16894ee-eb67-4865-8964-44ca5c87e18d\&quot;&quot; component=kubelet stream=stderr
+Jul 08 08:46:26 worker-kppzr-lls2q k0s[1766]: time=&quot;2024-07-08 08:46:26&quot; level=info msg=&quot;I0708 08:46:26.112550    1814 kuberuntime_container_linux.go:167] \&quot;No swap cgroup controller present\&quot; swapBehavior=\&quot;\&quot; pod=\&quot;kube-system/node-shell-a16894ee-eb67-4865-8964-44ca5c87e18d\&quot; containerName=\&quot;shell\&quot;&quot; component=kubelet stream=stderr
 </code></pre></div>
-<p>The download script accepts the following environment variables:</p>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">Variable</th>
-<th style="text-align: left;">Purpose</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;"><code>K0S_VERSION=v1.30.3+k0s.0</code></td>
-<td style="text-align: left;">Select the version of k0s to be installed</td>
-</tr>
-<tr>
-<td style="text-align: left;"><code>DEBUG=true</code></td>
-<td style="text-align: left;">Output commands and their arguments at execution.</td>
-</tr>
-</tbody>
-</table>
-<p><strong>Note</strong>: If you require environment variables and use sudo, you can do:</p>
-<div class="highlight"><pre><span></span><code>curl<span class="w"> </span>--proto<span class="w"> </span><span class="s1">&#39;=https&#39;</span><span class="w"> </span>--tlsv1.2<span class="w"> </span>-sSf<span class="w"> </span>https://get.k0s.sh<span class="w"> </span><span class="p">|</span><span class="w"> </span>sudo<span class="w"> </span><span class="nv">K0S_VERSION</span><span class="o">=</span>v1.30.3+k0s.0<span class="w"> </span>sh
-</code></pre></div>
-<h3 id="2-bootstrap-a-controller-node">2. Bootstrap a controller node<a class="headerlink" href="#2-bootstrap-a-controller-node" title="Permanent link">#</a></h3>
-<p>Create a configuration file:</p>
-<div class="highlight"><pre><span></span><code>mkdir<span class="w"> </span>-p<span class="w"> </span>/etc/k0s
-k0s<span class="w"> </span>config<span class="w"> </span>create<span class="w"> </span>&gt;<span class="w"> </span>/etc/k0s/k0s.yaml
-</code></pre></div>
-<p><strong>Note</strong>: For information on settings modification, refer to the <a href="../configuration/">configuration</a> documentation.</p>
-<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>k0s<span class="w"> </span>install<span class="w"> </span>controller<span class="w"> </span>-c<span class="w"> </span>/etc/k0s/k0s.yaml
-</code></pre></div>
-<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>k0s<span class="w"> </span>start
-</code></pre></div>
-<p>k0s process acts as a "supervisor" for all of the control plane components. In moments the control plane will be up and running.</p>
-<h3 id="3-create-a-join-token">3. Create a join token<a class="headerlink" href="#3-create-a-join-token" title="Permanent link">#</a></h3>
-<p>You need a token to join workers to the cluster. The token embeds information that enables mutual trust between the worker and controller(s) and which allows the node to join the cluster as worker.</p>
-<p>To get a token, run the following command on one of the existing controller nodes:</p>
-<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>k0s<span class="w"> </span>token<span class="w"> </span>create<span class="w"> </span>--role<span class="o">=</span>worker
-</code></pre></div>
-<p>The resulting output is a long <a href="#about-tokens">token</a> string, which you can use to add a worker to the cluster.</p>
-<p>For enhanced security, run the following command to set an expiration time for the token:</p>
-<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>k0s<span class="w"> </span>token<span class="w"> </span>create<span class="w"> </span>--role<span class="o">=</span>worker<span class="w"> </span>--expiry<span class="o">=</span>100h<span class="w"> </span>&gt;<span class="w"> </span>token-file
-</code></pre></div>
-<h3 id="4-add-workers-to-the-cluster">4. Add workers to the cluster<a class="headerlink" href="#4-add-workers-to-the-cluster" title="Permanent link">#</a></h3>
-<p>To join the worker, run k0s in the worker mode with the join token you created:</p>
-<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>k0s<span class="w"> </span>install<span class="w"> </span>worker<span class="w"> </span>--token-file<span class="w"> </span>/path/to/token/file
-</code></pre></div>
-<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>k0s<span class="w"> </span>start
-</code></pre></div>
-<h4 id="about-tokens">About tokens<a class="headerlink" href="#about-tokens" title="Permanent link">#</a></h4>
-<p>The join tokens are base64-encoded <a href="https://kubernetes.io/docs/tasks/access-application-cluster/configure-access-multiple-clusters/">kubeconfigs</a> for several reasons:</p>
-<ul>
-<li>Well-defined structure</li>
-<li>Capable of direct use as bootstrap auth configs for kubelet</li>
-<li>Embedding of CA info for mutual trust</li>
-</ul>
-<p>The bearer token embedded in the kubeconfig is a <a href="https://kubernetes.io/docs/reference/access-authn-authz/bootstrap-tokens/">bootstrap token</a>. For controller join tokens and worker join tokens k0s uses different usage attributes to ensure that k0s can validate the token role on the controller side.</p>
-<h3 id="5-add-controllers-to-the-cluster">5. Add controllers to the cluster<a class="headerlink" href="#5-add-controllers-to-the-cluster" title="Permanent link">#</a></h3>
-<p><strong>Note</strong>: Either etcd or an external data store (MySQL or Postgres) via kine must be in use to add new controller nodes to the cluster. Pay strict attention to the <a href="../high-availability/">high availability configuration</a> and make sure the configuration is identical for all controller nodes.</p>
-<p>To create a join token for the new controller, run the following command on an existing controller:</p>
-<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>k0s<span class="w"> </span>token<span class="w"> </span>create<span class="w"> </span>--role<span class="o">=</span>controller<span class="w"> </span>--expiry<span class="o">=</span>1h<span class="w"> </span>&gt;<span class="w"> </span>token-file
-</code></pre></div>
-<p>On the new controller, run:</p>
-<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>k0s<span class="w"> </span>install<span class="w"> </span>controller<span class="w"> </span>--token-file<span class="w"> </span>/path/to/token/file<span class="w"> </span>-c<span class="w"> </span>/etc/k0s/k0s.yaml
-</code></pre></div>
-<p>Important notice here is that each controller in the cluster must have k0s.yaml otherwise some cluster nodes will use default config values which will lead to inconsistency behavior.
-If your configuration file includes IP addresses (node address, sans, etcd peerAddress), remember to update them accordingly for this specific controller node.</p>
-<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>k0s<span class="w"> </span>start
-</code></pre></div>
-<h3 id="6-check-k0s-status">6. Check k0s status<a class="headerlink" href="#6-check-k0s-status" title="Permanent link">#</a></h3>
-<p>To get general information about your k0s instance's status:</p>
-<div class="highlight"><pre><span></span><code><span class="w"> </span>sudo<span class="w"> </span>k0s<span class="w"> </span>status
-</code></pre></div>
-<div class="highlight"><pre><span></span><code>Version:<span class="w"> </span>v1.30.3+k0s.0
-Process<span class="w"> </span>ID:<span class="w"> </span><span class="m">2769</span>
-Parent<span class="w"> </span>Process<span class="w"> </span>ID:<span class="w"> </span><span class="m">1</span>
-Role:<span class="w"> </span>controller
-Init<span class="w"> </span>System:<span class="w"> </span>linux-systemd
-Service<span class="w"> </span>file:<span class="w"> </span>/etc/systemd/system/k0scontroller.service
-</code></pre></div>
-<h3 id="7-access-your-cluster">7. Access your cluster<a class="headerlink" href="#7-access-your-cluster" title="Permanent link">#</a></h3>
-<p>Use the Kubernetes 'kubectl' command-line tool that comes with k0s binary to deploy your application or check your node status:</p>
-<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>k0s<span class="w"> </span>kubectl<span class="w"> </span>get<span class="w"> </span>nodes
-</code></pre></div>
-<div class="highlight"><pre><span></span><code>NAME<span class="w">   </span>STATUS<span class="w">   </span>ROLES<span class="w">    </span>AGE<span class="w">    </span>VERSION
-k0s<span class="w">    </span>Ready<span class="w">    </span>&lt;none&gt;<span class="w">   </span>4m6s<span class="w">   </span>v1.30.3+k0s
-</code></pre></div>
-<p>You can also access your cluster easily with <a href="https://k8slens.dev/">Lens</a>, simply by copying the kubeconfig and pasting it to Lens:</p>
-<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>cat<span class="w"> </span>/var/lib/k0s/pki/admin.conf
-</code></pre></div>
-<p><strong>Note</strong>: To access the cluster from an external network you must replace <code>localhost</code> in the kubeconfig with the host ip address for your controller.</p>
-<h2 id="next-steps">Next Steps<a class="headerlink" href="#next-steps" title="Permanent link">#</a></h2>
-<ul>
-<li><a href="../k0sctl-install/">Install using k0sctl</a>: Deploy multi-node clusters using just one command</li>
-<li><a href="../configuration/">Control plane configuration options</a>: Networking and datastore configuration</li>
-<li><a href="../worker-node-config/">Worker node configuration options</a>: Node labels and kubelet arguments</li>
-<li><a href="../cloud-providers/">Support for cloud providers</a>: Load balancer or storage configuration</li>
-<li><a href="../examples/traefik-ingress/">Installing the Traefik Ingress Controller</a>: Ingress deployment information</li>
-</ul>
+<h2 id="where-are-the-logs">Where are the logs?<a class="headerlink" href="#where-are-the-logs" title="Permanent link">#</a></h2>
+<h3 id="systemd-based-setups">systemd based setups<a class="headerlink" href="#systemd-based-setups" title="Permanent link">#</a></h3>
+<p>SystemD uses journal log system for all logs. This means that you can access k0s and all the sub-component logs using <code>journalctl</code>. For example if you are interested in kubelet logs, you can run something like <code>journalctl -u k0sworker | grep component=kubelet</code>.</p>
+<h3 id="openrc-based-setups">openRC based setups<a class="headerlink" href="#openrc-based-setups" title="Permanent link">#</a></h3>
+<p>openRC stores logs of services in <code>/var/log/k0sworker.log</code>. Again, if you're interested in specific component logs you cat run something like <code>grep component=kubelet /var/log/k0s.log</code>.</p>
 
 
 
