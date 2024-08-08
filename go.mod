@@ -12,7 +12,7 @@ require (
 	github.com/asaskevich/govalidator v0.0.0-20200428143746-21a406dcc535
 	github.com/avast/retry-go v3.0.0+incompatible
 	github.com/bombsimon/logrusr/v4 v4.1.0
-	github.com/carlmjohnson/requests v0.23.5
+	github.com/carlmjohnson/requests v0.24.1
 	github.com/cavaliergopher/grab/v3 v3.0.1
 	github.com/cilium/ebpf v0.16.0
 	github.com/cloudflare/cfssl v1.6.4
@@ -53,9 +53,9 @@ require (
 	go.etcd.io/etcd/etcdutl/v3 v3.5.15
 	go.uber.org/zap v1.27.0
 	golang.org/x/crypto v0.25.0
-	golang.org/x/mod v0.19.0
-	golang.org/x/sync v0.7.0
-	golang.org/x/sys v0.22.0
+	golang.org/x/mod v0.20.0
+	golang.org/x/sync v0.8.0
+	golang.org/x/sys v0.23.0
 	golang.org/x/tools v0.23.0
 	google.golang.org/grpc v1.65.0
 	helm.sh/helm/v3 v3.15.3
