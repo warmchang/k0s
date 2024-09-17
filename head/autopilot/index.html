@@ -2665,10 +2665,10 @@ additional changes to the plan (other than status) will be recognized.<ul>
 
 <span class="w">  </span><span class="nt">commands</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">k0supdate</span><span class="p">:</span>
-<span class="w">        </span><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1.30.4+k0s.0</span>
+<span class="w">        </span><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1.31.0+k0s.0</span>
 <span class="w">        </span><span class="nt">platforms</span><span class="p">:</span>
 <span class="w">          </span><span class="nt">linux-amd64</span><span class="p">:</span>
-<span class="w">            </span><span class="nt">url</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://github.com/k0sproject/k0s/releases/download/v1.30.4+k0s.0/k0s-v1.30.4+k0s.0-amd64</span>
+<span class="w">            </span><span class="nt">url</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://github.com/k0sproject/k0s/releases/download/v1.31.0+k0s.0/k0s-v1.31.0+k0s.0-amd64</span>
 <span class="w">            </span><span class="nt">sha256</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;0000000000000000000000000000000000000000000000000000000000000000&#39;</span>
 <span class="w">        </span><span class="nt">targets</span><span class="p">:</span>
 <span class="w">          </span><span class="nt">controllers</span><span class="p">:</span>
@@ -2775,11 +2775,11 @@ this has not been tested.</li>
 <ul>
 <li>If a SHA256 hash is provided for the binary, the completed downloaded will be verified against it.</li>
 </ul>
-<h4 id="speccommandsairgapupdatetargetsworkers-object-optional"><code>spec.commands[].airgapupdate.targets.workers &lt;object&gt; (optional)</code><a class="headerlink" href="#speccommandsairgapupdatetargetsworkers-object-optional" title="Permanent link">#</a></h4>
+<h4 id="speccommandsairgapupdateworkers-object-optional"><code>spec.commands[].airgapupdate.workers &lt;object&gt; (optional)</code><a class="headerlink" href="#speccommandsairgapupdateworkers-object-optional" title="Permanent link">#</a></h4>
 <ul>
 <li>This object provides the details of how <code>workers</code> should be updated.</li>
 </ul>
-<h4 id="speccommandsairgapupdatetargetsworkerslimitsconcurrent-int-optional-default-1"><code>spec.commands[].airgapupdate.targets.workers.limits.concurrent &lt;int&gt; (optional, default = 1)</code><a class="headerlink" href="#speccommandsairgapupdatetargetsworkerslimitsconcurrent-int-optional-default-1" title="Permanent link">#</a></h4>
+<h4 id="speccommandsairgapupdateworkerslimitsconcurrent-int-optional-default-1"><code>spec.commands[].airgapupdate.workers.limits.concurrent &lt;int&gt; (optional, default = 1)</code><a class="headerlink" href="#speccommandsairgapupdateworkerslimitsconcurrent-int-optional-default-1" title="Permanent link">#</a></h4>
 <ul>
 <li>Specifying a <code>concurrent</code> value for worker targets will allow for that number of workers
 to be updated at a time. If no value is provided, <code>1</code> is assumed.</li>
