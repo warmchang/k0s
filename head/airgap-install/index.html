@@ -1699,7 +1699,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../FAQ/" class="md-nav__link">
+      <a href="../troubleshooting/FAQ/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1720,7 +1720,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../logs/" class="md-nav__link">
+      <a href="../troubleshooting/logs/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1741,7 +1741,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../troubleshooting/" class="md-nav__link">
+      <a href="../troubleshooting/troubleshooting/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1762,11 +1762,32 @@
   
   
     <li class="md-nav__item">
-      <a href="../support-dump/" class="md-nav__link">
+      <a href="../troubleshooting/support-dump/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     Support Insights
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../troubleshooting/certificate-authorities/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Certificate Authorities (CAs)
   </span>
   
 
@@ -2205,7 +2226,7 @@
 <li>A working cluster with at least one controller that will be used to build the
   image bundle. See the <a href="../install/">Quick Start Guide</a> for more information.</li>
 <li>The containerd CLI management tool <code>ctr</code>, installed on the worker node. See
-  the <a href="https://github.com/containerd/containerd/blob/v1.7.23/docs/getting-started.md">containerd Getting Started Guide</a> for more information.</li>
+  the <a href="https://github.com/containerd/containerd/blob/v1.7.24/docs/getting-started.md">containerd Getting Started Guide</a> for more information.</li>
 </ul>
 <h2 id="1-create-your-own-image-bundle-optional">1. Create your own image bundle (optional)<a class="headerlink" href="#1-create-your-own-image-bundle-optional" title="Permanent link">#</a></h2>
 <p>k0s/containerd uses OCI (Open Container Initiative) bundles for airgap installation. OCI bundles must be uncompressed. As OCI bundles are built specifically for each architecture, create an OCI bundle that uses the same processor architecture (x86-64, ARM64, ARMv7) as on the target system.</p>
