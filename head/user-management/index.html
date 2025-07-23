@@ -2412,6 +2412,11 @@
 
 
 
+<!--
+SPDX-FileCopyrightText: 2021 k0s authors
+SPDX-License-Identifier: CC-BY-SA-4.0
+-->
+
 <h1 id="user-management">User Management<a class="headerlink" href="#user-management" title="Permanent link">#</a></h1>
 <p>Kubernetes, and thus k0s, does not have any built-in functionality to manage users. Kubernetes relies solely on external sources for user identification and authentication. A client certificate is considered an external source in this case as Kubernetes API server "just" validates that the certificate is signed by a trusted CA. This means that it is recommended to use e.g. <a href="../examples/oidc/oidc-cluster-configuration/">OpenID Connect</a> to configure the API server to trust tokens issued by an external Identity Provider.</p>
 <p>k0s comes with some helper commands to create kubeconfig with client certificates for users. There are few caveats that one needs to take into consideration when using client certificates:</p>
@@ -2459,7 +2464,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Copyright &copy; 2021 <a href="https://mirantis.com/">Mirantis Inc.</a> - All rights reserved.
+      Copyright &copy; 2021 k0sproject a Series of LF Projects, LLC. For website terms of use, trademark policy and other project policies please see <a href="https://lfprojects.org/policies/" target="_blank">Linux Foundation policies</a>. - All rights reserved.
     </div>
   
   
