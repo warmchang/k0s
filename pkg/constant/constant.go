@@ -76,7 +76,7 @@ const (
 	MetricsImage                          = "quay.io/k0sproject/metrics-server"
 	MetricsImageVersion                   = "v0.8.1-0"
 	KubePauseContainerImage               = "quay.io/k0sproject/pause"
-	KubePauseContainerImageVersion        = "3.10.1"
+	KubePauseContainerImageVersion        = "3.10.2-0"
 	KubePauseWindowsContainerImage        = "registry.k8s.io/pause"
 	KubePauseWindowsContainerImageVersion = "3.10.1"
 	KubeProxyImage                        = "quay.io/k0sproject/kube-proxy"
